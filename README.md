@@ -16,15 +16,21 @@ The rules of tic-tac-toe are as follows:
 Build the business logic for a game of tic tac toe. It should be easy to implement a working game of tic tac toe by combining your code with any user interface, whether web or command line.
 
 ## How to test in terminal
-TBC
+```
+$ TBC
+```
 
 ## To do
-1. ~~Draw up the game and work out the scale of the logic~~
-2. Create test for game class and turn Rspec green
-3. Write tests for turn-by-turn logic
-4. Define methods for each turn
-5. Write tests for winning a game
-6. Define methods to check for a win
+- [x] Draw up the game and work out the scale of the logic
+- [x] Initialise bundle and rspec
+- [x] Create game class and spec
+- [ ] Write tests for winning a game
+- [ ] Define methods to check for a win
+- [ ] Create player class
+- [ ] Write tests for turn-by-turn logic
+- [ ] Define methods for each turn
+
 
 #### Extra
-1. Create a basic terminal interface to play the game
+- [ ] Create a basic terminal interface to play the game
+- [ ] Show game board through terminal
