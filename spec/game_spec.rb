@@ -22,4 +22,12 @@ describe Game do
     end
   end
 
+  describe "#check_for_win" do
+    it "checks for possible winning scenarios" do
+      game.my_move(1)
+      game.my_move(2)
+      expect{ game.my_move(3) }.to raise_error "Player 1 wins"
+    end
+  end
+
 end
