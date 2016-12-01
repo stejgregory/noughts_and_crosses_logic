@@ -24,9 +24,11 @@ $ TBC
 - [x] Draw up the game and work out the scale of the logic
 - [x] Initialise bundle and rspec
 - [x] Create game class and spec
+- [x] Write tests and pass for placing X or 0 on grid
 - [ ] Write tests for winning a game
 - [ ] Define methods to check for a win
 - [ ] Create player class
+- [ ] Refactor tests for 2 players
 - [ ] Write tests for turn-by-turn logic
 - [ ] Define methods for each turn
 
