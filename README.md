@@ -28,9 +28,9 @@ $ irb
 - [x] Initialise bundle and rspec
 - [x] Create game class and spec
 - [x] Write tests and pass for placing X or 0 on grid
-- [ ] Write tests for winning a game
-- [ ] Define methods to check for a win
-- [ ] Create player class
+- [x] Write tests for winning a game
+- [x] Define methods to check for a win
+- [x] ~~Create player class~~ Keeping players within game class now.
 - [ ] Refactor tests for 2 players
 - [ ] Write tests for turn-by-turn logic
 - [ ] Define methods for each turn

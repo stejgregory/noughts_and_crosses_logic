@@ -18,15 +18,33 @@ describe Game do
 
     it "doesn't allow a player to select a square already filled in" do
       game.my_move(4)
-      expect{ game.my_move(4) }.to raise_error "This square has already been selected in this game"
+      expect{ game.my_move(4) }.to raise_error "Square Taken"
     end
   end
 
   describe "#check_for_win" do
-    it "checks for possible winning scenarios" do
+    it "test a horizontal win" do
+      game.reset_game
       game.my_move(1)
       game.my_move(2)
-      expect{ game.my_move(3) }.to raise_error "Player 1 wins"
+      game.my_move(3)
+      expect(game.winner).to eq "Player1"
+    end
+
+    it "test a vertical win" do
+      game.reset_game
+      game.my_move(3)
+      game.my_move(6)
+      game.my_move(9)
+      expect(game.winner).to eq "Player1"
+    end
+
+    it "test a diagonal win" do
+      game.reset_game
+      game.my_move(3)
+      game.my_move(5)
+      game.my_move(7)
+      expect(game.winner).to eq "Player1"
     end
   end
 
