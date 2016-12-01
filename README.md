@@ -17,7 +17,10 @@ Build the business logic for a game of tic tac toe. It should be easy to impleme
 
 ## How to test in terminal
 ```
-$ TBC
+$ git clone https://github.com/stejgregory/noughts_and_crosses_logic.git
+$ bundle
+$ rspec
+$ irb
 ```
 
 ## To do
