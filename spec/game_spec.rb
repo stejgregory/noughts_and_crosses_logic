@@ -43,6 +43,22 @@ describe Game do
     end
   end
 
+  describe "drawing a game" do
+    it "identifies a draw" do
+      game.reset_game
+      fill_the_board_without_player_winning
+      expect(game.draw).to be true
+    end
+
+    it "doesn't identify a draw until there is one" do
+      game.reset_game
+      game.current_player_move(3) # Player1
+      game.current_player_move(4) # Player2
+      game.current_player_move(6) # Player1
+      expect(game.draw).to be false
+    end
+  end
+
   describe "#reset_game" do
     it "should reset the 'winner' variable" do
       game.reset_game

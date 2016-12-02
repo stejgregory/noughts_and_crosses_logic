@@ -2,13 +2,15 @@ require_relative 'player'
 
 class Game
 
-attr_reader :grid, :winner, :current_player
+attr_reader :grid, :winner, :draw, :turn_count, :current_player
 
 GRID_HASH = { 1 => '1', 2 => '2', 3 => '3', 4 => '4', 5 => '5', 6 => '6', 7 => '7', 8=> '8', 9 => '9' }
 
   def initialize
     @grid = GRID_HASH
     @winner = nil
+    @draw = false
+    @turn_count = 0
     @player1 = Player.new('O')
     @player2 = Player.new('X')
     @current_player = @player1
@@ -18,13 +20,17 @@ GRID_HASH = { 1 => '1', 2 => '2', 3 => '3', 4 => '4', 5 => '5', 6 => '6', 7 => '
     if applicable_move(selected_square) == true
      @grid[selected_square] = @current_player.symbol  # Inserts current player's symbol into the selected square of the grid
     end
+    update_turn_count
     check_for_win
     switch_player_turn
+    check_for_draw
   end
 
   def reset_game
     @grid = { 1 => '1', 2 => '2', 3 => '3', 4 => '4', 5 => '5', 6 => '6', 7 => '7', 8=> '8', 9 => '9' }
     @winner = nil
+    @turn_count = 0
+    @draw = false
   end
 
 private
@@ -69,4 +75,13 @@ private
     end
   end
 
+  def check_for_draw
+    if @turn_count == 9 && @winner != @current_player
+      @draw = true
+    end
+  end
+
+  def update_turn_count
+    @turn_count +=1
+  end
 end
