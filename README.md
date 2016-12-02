@@ -15,12 +15,16 @@ The rules of tic-tac-toe are as follows:
 
 Build the business logic for a game of tic tac toe. It should be easy to implement a working game of tic tac toe by combining your code with any user interface, whether web or command line.
 
-## How to test in terminal
+## How to test game logic in terminal
 ```
 $ git clone https://github.com/stejgregory/noughts_and_crosses_logic.git
+$ cd noughts_and_crosses_logic
 $ bundle
 $ rspec
 $ irb
+$ require './lib/game
+$ game = Game.new
+
 ```
 
 ## To do
@@ -30,12 +34,11 @@ $ irb
 - [x] Write tests and pass for placing X or 0 on grid
 - [x] Write tests for winning a game
 - [x] Define methods to check for a win
-- [x] ~~Create player class~~ Keeping players within game class now.
-- [ ] Refactor tests for 2 players
-- [ ] Write tests for turn-by-turn logic
-- [ ] Define methods for each turn
-
+- [x] Create player class
+- [x] Refactor tests for 2 players
+- [ ] Test & Method for a draw
 
 #### Extra
+- [ ] Refactor more
 - [ ] Create a basic terminal interface to play the game
 - [ ] Show game board through terminal
