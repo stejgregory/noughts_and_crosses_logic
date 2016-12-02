@@ -45,7 +45,7 @@ $ game.current_player_move('PLAYER 1 PICKS A SQUARE HERE')
 $ game.current_player_move('PLAYER 2 PICKS A SQUARE HERE')
 ```
 ...until we have a winner! Or you draw :(
-  
+
 ## To do
 - [x] Draw up the game and work out the scale of the logic
 - [x] Initialise bundle and rspec
@@ -55,7 +55,7 @@ $ game.current_player_move('PLAYER 2 PICKS A SQUARE HERE')
 - [x] Define methods to check for a win
 - [x] Create player class
 - [x] Refactor tests for 2 players
-- [ ] Test & Method for a draw
+- [x] Test & Method for a draw
 
 #### Extra
 - [ ] Refactor more
